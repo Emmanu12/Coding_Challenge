@@ -8,6 +8,7 @@ import { TopicComponent } from './topic/topic.component';
 import { TopicListComponent } from './topic/topic-list/topic-list.component';
 import { TopicDetailComponent } from './topic/topic-detail/topic-detail.component';
 import { TopicItemComponent } from './topic/topic-list/topic-item/topic-item.component';
+import { ToptopiclistComponent } from './toptopiclist/toptopiclist.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TopicItemComponent } from './topic/topic-list/topic-item/topic-item.com
     TopicComponent,
     TopicListComponent,
     TopicDetailComponent,
-    TopicItemComponent
+    TopicItemComponent,
+    ToptopiclistComponent
   ],
   imports: [
     BrowserModule,
