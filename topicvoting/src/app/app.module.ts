@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrderBy } from './order.pipe'; 
-
+import { JitCompiler } from '@angular/compiler';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TopicComponent } from './topic/topic.component';
@@ -15,7 +15,7 @@ import { TopicStartComponent } from './topic/topic-start/topic-start.component';
 import { TopicEditComponent } from './topic/topic-edit/topic-edit.component';
 import { BestListComponent } from './topic/best-list/best-list.component';
 import { BestItemComponent } from './topic/best-list/best-item/best-item.component';
-
+import { COMPILER_PROVIDERS } from "@angular/compiler";
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { BestItemComponent } from './topic/best-list/best-item/best-item.compone
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [COMPILER_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Topic } from './topic.model';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
+
 @Injectable()
 export class TopicService{
     topicsChanged = new Subject<Topic[]>();
@@ -43,4 +44,7 @@ order = "upvote";
         this.topics.push(topic);
         this.topicsChanged.next(this.topics.slice());
   }
+    justRefresh(topic: Topic){
+        this.topicsChanged.next(this.topics.slice());
+    }
 }
