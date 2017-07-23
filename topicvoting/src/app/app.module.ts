@@ -9,6 +9,7 @@ import { TopicListComponent } from './topic/topic-list/topic-list.component';
 import { TopicDetailComponent } from './topic/topic-detail/topic-detail.component';
 import { TopicItemComponent } from './topic/topic-list/topic-item/topic-item.component';
 import { ToptopiclistComponent } from './toptopiclist/toptopiclist.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToptopiclistComponent } from './toptopiclist/toptopiclist.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
