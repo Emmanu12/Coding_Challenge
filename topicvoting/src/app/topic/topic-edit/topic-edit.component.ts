@@ -24,14 +24,22 @@ export class TopicEditComponent implements OnInit {
   }
   onSubmit() {
     this.topicService.addTopic(this.topicForm.value);
+    this.onCancel();
+  }
+  onCancel() {
+    this.router.navigate(['../'],{relativeTo:this.route});
   }
     private initForm() {
       let topicTitle = '';
       let topicDescription = '';
+      let FirstUP = 0;
+      let FirstDown = 0;
 
     this.topicForm=new FormGroup({
       'title': new FormControl(topicTitle, Validators.required),
       'description': new FormControl(topicDescription, Validators.required),
+      'upvote': new FormControl(FirstUP, Validators.required),
+      'downvote': new FormControl(FirstDown, Validators.required)
     });
 
   }

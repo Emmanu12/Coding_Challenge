@@ -1,8 +1,11 @@
 <div class="row">
-  <div class="col-md-5">
-      <app-topic-list (topicWasSelected) = "selectedTopic = $event"></app-topic-list>
+  <div class="col-md-4">
+      <app-best-list (topicWasSelected) = "selectedTopic = $event"></app-best-list>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-4">
+        <app-topic-list (topicWasSelected) = "selectedTopic = $event"></app-topic-list>
+  </div>
+  <div class="col-md-4">
      <router-outlet>
          
      </router-outlet>
