@@ -1,13 +1,14 @@
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn-success">New Topic</button>
+        <button class="btn btn-success" (click)="onNewTopic()">New Topic</button>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <app-topic-item *ngFor="let topicEl of topics"
+        <app-topic-item *ngFor="let topicEl of topics; let i = index"
         [topic] = "topicEl"
-        (topicSelected) = "onTopicSelected(topicEl)"></app-topic-item>
+        (topicSelected) = "onTopicSelected(topicEl)"
+        [index] = "i"></app-topic-item>
     </div>
 </div>

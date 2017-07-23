@@ -3,9 +3,8 @@
       <app-topic-list (topicWasSelected) = "selectedTopic = $event"></app-topic-list>
   </div>
   <div class="col-md-7">
-      <app-topic-detail *ngIf = "selectedTopic; else infoText" [topic]="selectedTopic"></app-topic-detail>
-      <ng-template #infoText>
-          <p>Please select a Topic to view</p>
-      </ng-template>
+     <router-outlet>
+         
+     </router-outlet>
   </div>
 </div>

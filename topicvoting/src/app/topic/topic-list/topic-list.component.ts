@@ -1,5 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Topic } from '../topic.model';
+import { TopicService } from '../topic.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-topic-list',
@@ -8,16 +10,25 @@ import { Topic } from '../topic.model';
 })
 export class TopicListComponent implements OnInit {
   @Output() topicWasSelected= new EventEmitter<Topic>();
-  topics : Topic[]=[
-    new Topic('Title test','This is a sample description'),
-    new Topic('Title second','This is a sample description')
-  ];
+  topics: Topic[];
 
-  constructor() { }
+  constructor(private topicService: TopicService,
+              private router: Router,
+              private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.topicService.topicsChanged.subscribe(
+      (topics: Topic[]) => {
+        this.topics=topics;
+      });
+
+    this.topics= this.topicService.getTopics();
   }
   onTopicSelected(topic: Topic){
     this.topicWasSelected.emit(topic);
+  }
+  onNewTopic(){
+    this.router.navigate(['new'],{relativeTo:this.route});
   }
 }
