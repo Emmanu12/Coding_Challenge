@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-xs-12">
       <div class="best-list-class">
-        <app-best-item *ngFor="let topicEl of topics| orderBy:'upvote' | slice:0:10 "
+        <app-best-item *ngFor="let topicEl of topics| orderBy:'upvote' | slice:0:20 "
         [topic] = "topicEl"
 >
 

@@ -8,11 +8,11 @@ routerLinkActive="active"
     </div>
     <div class="pull-right" style="text-align:center;">
         <div class="pull-left" style="margin:0px 5px;">
-            <button class="btn btn-block btn-sm btn-success" (click)="incre()">&#8593;</button>
+            <button class="btn btn-block btn-sm btn-success" (click)="incre()" style="font-weight:bold;">&#8593;</button>
             <span>{{ topic.upvote }}</span>
         </div>
         <div class="pull-right">
-            <button class="btn btn-block btn-sm btn-danger" (click)="decre()">&#8595;</button>
+            <button class="btn btn-block btn-sm btn-danger" (click)="decre()" style="font-weight:bold;">&#8595;</button>
             <span>{{ topic.downvote }}</span>
         </div>
     </div>
