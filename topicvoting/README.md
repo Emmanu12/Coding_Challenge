@@ -28,8 +28,11 @@ Topicvoting is a web app. Users can add topic,upvote or downvote topics.
 ```
 ## Service
 
+```
 topic.service.ts -- Contain functions for getting topic list, Getting topic detail when that topic is pressed, Adding topic and refreshing top 20 list.
+```
 
 ## Pipe
-
+```
 order.pipe.ts -- Sort the topics in descending order on the basis of upvote count.
+```
