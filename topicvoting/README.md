@@ -10,13 +10,21 @@ Topicvoting is a web app. Users can add topic,upvote or downvote topics.
 ## Components
 
 | header  -- Displays the top header, Header containig 'Topic Voting' text
+
 | topic   -- Parent component of all other components that deal with topic
+
     | best-list    --Display top 20 topics
+
     | topic-detail --Display details of a topic when that topic is clicked in the topic list
+
     | topic-edit   --For adding new topic, invoked when 'New Topic' button pressed
+
     | topic-list   --Display all topics, lists all topic-item
+
         | topic-item  --Single item in topic list
+
     | topic-start  --Ask user to select a topic from topic list
+    
 
 
 ## Service
