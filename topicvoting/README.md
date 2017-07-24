@@ -40,6 +40,7 @@ topic.service.ts -- Contain functions for
                         Refreshing top 20 list.
 
 ```
+
 ## Pipe
 ```
 order.pipe.ts -- Sort the topics in descending order on the basis of upvote count.
