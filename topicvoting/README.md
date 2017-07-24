@@ -8,7 +8,7 @@ I have added 24 topics in this app in way that page refresh will not empty this 
 Users can add topics but the topics users added will lose after page refresh.
 
 1.  Users can add new topics by clicking 'New topic' button.
-2.  Then after adding Topic title and Descrition, users can click save button.
+2.  Then after adding Topic title and Descrition, users can click save button. Newly added topic comes at the bottom of the topic list.
 3.  In the topic list, Users can upvote or downvote a topic.
 4.  Top 20 list displays top 20 topics in the topic list in the basis of upvoting count.
 
