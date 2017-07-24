@@ -17,10 +17,16 @@ export class TopicItemComponent implements OnInit {
               private router: Router) { }
   ngOnInit() {
   }
+
+  // For upvote button
+
   incre(){
     this.topic.upvote = this.topic.upvote+1;
     this.topicService.justRefresh(this.topic);
   }
+
+  // For downvote button
+  
   decre(){
     this.topic.downvote = this.topic.downvote+1;
     this.router.navigate(['../'],{relativeTo:this.route});

@@ -34,9 +34,9 @@ export class TopicService{
   ];
 order = "upvote";
 
-  getTopics(){
-      return this.topics.slice();
-  }
+    getTopics(){
+        return this.topics.slice();
+    }
     getTopic(index: number){
         return this.topics[index];
     }

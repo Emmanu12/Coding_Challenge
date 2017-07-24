@@ -1,28 +1,27 @@
 # Topicvoting
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.2.
+Topicvoting is a web app. Users can add topic,upvote or downvote topics.
 
-## Development server
+1.  Users can add new topics by clicking 'New topic' button.
+2.  Then after adding Topic title and Descrition, users can click save button.
+3.  In the topic list, Users can upvote or downvote a topic.
+4.  Top 20 list displays top 20 topics in the topic list in the basis of upvoting count.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Components
 
-## Code scaffolding
+| header  -- Displays the top header, Header containig 'Topic Voting' text
+| topic   -- Parent component of all other components that deal with topic
+    | best-list    --Display top 20 topics
+    | topic-detail --Display details of a topic when that topic is clicked in the topic list
+    | topic-edit   --For adding new topic, invoked when 'New Topic' button pressed
+    | topic-list   --Display all topics, lists all topic-item
+        | topic-item  --Single item in topic list
+    | topic-start  --Ask user to select a topic from topic list
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Service
 
-## Build
+topic.service.ts -- Contain functions for getting topic list, Getting topic detail when that topic is pressed, Adding topic and refreshing top 20 list.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Pipe
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+order.pipe.ts -- Sort the topics in descending order on the basis of upvote count.

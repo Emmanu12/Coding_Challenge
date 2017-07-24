@@ -11,18 +11,11 @@ export class OrderBy{
        return array;
      } 
  
-     //ascending
-     if (!asc){
-       return Array.from(array).sort((item1: any, item2: any) => { 
-         return this.orderByComparator(item1[orderBy], item2[orderBy]);
-       });
-     }
-     else{
-       //not asc
-       return Array.from(array).sort((item1: any, item2: any) => { 
+    
+    return Array.from(array).sort((item1: any, item2: any) => { 
          return this.orderByComparator(item2[orderBy], item1[orderBy]);
-       });
-     }
+    });
+
  
  }
  

@@ -22,10 +22,13 @@ export class TopicEditComponent implements OnInit {
       this.initForm();
     })
   }
+
+  // When press save button
   onSubmit() {
     this.topicService.addTopic(this.topicForm.value);
     this.onCancel();
   }
+  // When press cancel
   onCancel() {
     this.router.navigate(['../'],{relativeTo:this.route});
   }

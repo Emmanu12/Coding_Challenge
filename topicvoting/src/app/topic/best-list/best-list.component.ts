@@ -8,6 +8,9 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './best-list.component.html',
   styleUrls: ['./best-list.component.css']
 })
+
+// Component for top 20 list
+
 export class BestListComponent implements OnInit {
 @Output() topicWasSelected= new EventEmitter<Topic>();
   topics: Topic[];
@@ -22,13 +25,7 @@ export class BestListComponent implements OnInit {
       (topics: Topic[]) => {
         this.topics=topics;
       });
-
     this.topics= this.topicService.getTopics();
   }
-  onTopicSelected(topic: Topic){
-    this.topicWasSelected.emit(topic);
-  }
-  onNewTopic(){
-    this.router.navigate(['new'],{relativeTo:this.route});
-  }
+
 }

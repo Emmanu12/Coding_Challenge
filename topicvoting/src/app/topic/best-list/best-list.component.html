@@ -1,3 +1,5 @@
+<!-- Top 20 topics are listed here -->
+
 <div class="row">
     <div class="col-xs-12">
         <h2>Top 20</h2>
@@ -8,9 +10,7 @@
     <div class="col-xs-12">
       <div class="best-list-class">
         <app-best-item *ngFor="let topicEl of topics| orderBy:'upvote' | slice:0:20 "
-        [topic] = "topicEl"
->
-
+        [topic] = "topicEl">
 </app-best-item>
       </div>
     </div>

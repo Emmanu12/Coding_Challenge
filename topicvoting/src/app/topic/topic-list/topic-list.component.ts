@@ -25,9 +25,13 @@ export class TopicListComponent implements OnInit {
 
     this.topics= this.topicService.getTopics();
   }
+  
+  // Know which topic selected and emit that topic 
   onTopicSelected(topic: Topic){
     this.topicWasSelected.emit(topic);
   }
+
+  // New topic button
   onNewTopic(){
     this.router.navigate(['new'],{relativeTo:this.route});
   }

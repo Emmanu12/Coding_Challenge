@@ -6,11 +6,12 @@ import { Topic } from '../../topic.model';
   templateUrl: './best-item.component.html',
   styleUrls: ['./best-item.component.css']
 })
+
+// Single topic in Top 20
+
 export class BestItemComponent implements OnInit {
 
   @Input() topic: Topic;
-  @Input() index: number;
-
 
   ngOnInit() {
   }

@@ -8,6 +8,9 @@ import { TopicService } from './topic.service';
   styleUrls: ['./topic.component.css'],
   providers:[TopicService]
 })
+
+// Parent Component of all topic related things,topic list,sigle topic,topic edit 
+
 export class TopicComponent implements OnInit {
   selectedTopic: Topic;
   constructor() { }

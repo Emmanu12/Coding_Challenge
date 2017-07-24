@@ -9,7 +9,6 @@ import { TopicComponent } from './topic/topic.component';
 import { TopicListComponent } from './topic/topic-list/topic-list.component';
 import { TopicDetailComponent } from './topic/topic-detail/topic-detail.component';
 import { TopicItemComponent } from './topic/topic-list/topic-item/topic-item.component';
-import { ToptopiclistComponent } from './toptopiclist/toptopiclist.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TopicStartComponent } from './topic/topic-start/topic-start.component';
 import { TopicEditComponent } from './topic/topic-edit/topic-edit.component';
@@ -25,7 +24,6 @@ import { COMPILER_PROVIDERS } from "@angular/compiler";
     TopicListComponent,
     TopicDetailComponent,
     TopicItemComponent,
-    ToptopiclistComponent,
     TopicStartComponent,
     TopicEditComponent,
     BestListComponent,
@@ -38,7 +36,7 @@ import { COMPILER_PROVIDERS } from "@angular/compiler";
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [COMPILER_PROVIDERS],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
