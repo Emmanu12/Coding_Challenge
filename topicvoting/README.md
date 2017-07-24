@@ -8,7 +8,7 @@ Topicvoting is a web app. Users can add topic,upvote or downvote topics.
 4.  Top 20 list displays top 20 topics in the topic list in the basis of upvoting count.
 
 ## Components
-
+```
 | header  -- Displays the top header, Header containig 'Topic Voting' text
 
 | topic   -- Parent component of all other components that deal with topic
@@ -25,7 +25,7 @@ Topicvoting is a web app. Users can add topic,upvote or downvote topics.
 
     | topic-start  --Ask user to select a topic from topic list
 
-
+```
 ## Service
 
 topic.service.ts -- Contain functions for getting topic list, Getting topic detail when that topic is pressed, Adding topic and refreshing top 20 list.
