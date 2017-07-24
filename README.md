@@ -1,6 +1,11 @@
 # Topicvoting
 
-Topicvoting is a web app. Users can add topic,upvote or downvote topics.
+Topicvoting is a web app. Users can add topic,upvote or downvote topics. 
+
+## Assumption
+
+I have added 24 topics in this app in way that page refresh will not empty this 24 topics and their data(upvote & downvote count). 
+Users can add topics but the topics users added will lose after page refresh.
 
 1.  Users can add new topics by clicking 'New topic' button.
 2.  Then after adding Topic title and Descrition, users can click save button.
@@ -40,6 +45,7 @@ topic.service.ts -- Contain functions for
                         Refreshing top 20 list.
 
 ```
+
 ## Pipe
 ```
 order.pipe.ts -- Sort the topics in descending order on the basis of upvote count.
